@@ -1,0 +1,11 @@
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\LetraU.exe.config
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\LetraU.exe
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\LetraU.pdb
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\OpenTK.dll
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\OpenTK.pdb
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\OpenTK.xml
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.csproj.AssemblyReference.cache
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.csproj.CoreCompileInputs.cache
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.csproj.CopyComplete
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.exe
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.pdb
