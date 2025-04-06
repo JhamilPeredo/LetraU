@@ -32,135 +32,24 @@ namespace LetraU
             GL.Rotate(rotacionX, 1.0f, 0.0f, 0.0f);
             GL.Rotate(rotacionY, 0.0f, 1.0f, 0.0f);
 
-            DibujarU();
+
+            Posicion[] posiciones = new Posicion[]
+           {
+                new Posicion(0f, 0f, 0f),      // Centro
+                new Posicion(6f, 0f, 0f),      // A la derecha
+                new Posicion(-6f, 0f, 0f),     // A la izquierda
+                new Posicion(0f, 6f, 0f),      // Arriba
+                new Posicion(0f, -6f, 0f)      // Abajo
+           };
+
+            foreach (var posicion in posiciones)
+            {
+                Vertice.DibujarU(posicion);
+            }
 
             SwapBuffers();
         }
-
-
-
-        private void DibujarU()
-        {
-            // Rectangulo Inferior
-
-            GL.Begin(PrimitiveType.Quads);
-            GL.Color3(0.0f, 0.0f, 1.0f);
-
-            
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.5f, 0.5f); 
-            GL.Vertex3(-2.0f, -1.5f, 0.5f);
-            
-            
-            GL.Vertex3(-2.0f, -1.0f, -0.5f);
-            GL.Vertex3(2.0f, -1.0f, -0.5f);
-            GL.Vertex3(2.0f, -1.5f, -0.5f); 
-            GL.Vertex3(-2.0f, -1.5f, -0.5f);
-            
-            
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.5f, 0.5f); 
-            GL.Vertex3(-2.0f, -1.5f, 0.5f);
-            
-           
-            GL.Vertex3(-2.0f, -1.5f, 0.5f);
-            GL.Vertex3(2.0f, -1.5f, 0.5f);
-            GL.Vertex3(2.0f, -1.5f, -0.5f); 
-            GL.Vertex3(-2.0f, -1.5f, -0.5f);
-            
-            
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.5f, 0.5f); 
-            GL.Vertex3(2.0f, -1.5f, -0.5f); 
-            GL.Vertex3(2.0f, -1.0f, -0.5f);
-            
-           
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            GL.Vertex3(-2.0f, -1.5f, 0.5f); 
-            GL.Vertex3(-2.0f, -1.5f, -0.5f); 
-            GL.Vertex3(-2.0f, -1.0f, -0.5f);
-            
-            GL.End();
-
-            // Rectangulo de la Izquierda
-            GL.Begin(PrimitiveType.Quads);
-            GL.Color3(0.0f, 0.0f, 1.0f); 
-
-            
-            GL.Vertex3(-2.0f, 1.5f, 0.5f);
-            GL.Vertex3(-1.5f, 1.5f, 0.5f);
-            GL.Vertex3(-1.5f, -1.0f, 0.5f);
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            
-            GL.Vertex3(-2.0f, 1.5f, -0.5f);
-            GL.Vertex3(-1.5f, 1.5f, -0.5f);
-            GL.Vertex3(-1.5f, -1.0f, -0.5f);
-            GL.Vertex3(-2.0f, -1.0f, -0.5f);
-            
-            GL.Vertex3(-2.0f, 1.5f, 0.5f);
-            GL.Vertex3(-1.5f, 1.5f, 0.5f);
-            GL.Vertex3(-1.5f, 1.5f, -0.5f);
-            GL.Vertex3(-2.0f, 1.5f, -0.5f);
-            
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            GL.Vertex3(-1.5f, -1.0f, 0.5f);
-            GL.Vertex3(-1.5f, -1.0f, -0.5f);
-            GL.Vertex3(-2.0f, -1.0f, -0.5f);
-           
-            GL.Vertex3(-1.5f, 1.5f, 0.5f);
-            GL.Vertex3(-1.5f, -1.0f, 0.5f);
-            GL.Vertex3(-1.5f, -1.0f, -0.5f);
-            GL.Vertex3(-1.5f, 1.5f, -0.5f);
-           
-            GL.Vertex3(-2.0f, 1.5f, 0.5f);
-            GL.Vertex3(-2.0f, -1.0f, 0.5f);
-            GL.Vertex3(-2.0f, -1.0f, -0.5f);
-            GL.Vertex3(-2.0f, 1.5f, -0.5f);
-
-            GL.End();
-
-            // Rectangulo de la Derecha
-
-            GL.Begin(PrimitiveType.Quads);
-            GL.Color3(0.0f, 0.0f, 1.0f); 
-
-            
-            GL.Vertex3(1.5f, 1.5f, 0.5f);
-            GL.Vertex3(2.0f, 1.5f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(1.5f, -1.0f, 0.5f);
-           
-            GL.Vertex3(1.5f, 1.5f, -0.5f);
-            GL.Vertex3(2.0f, 1.5f, -0.5f);
-            GL.Vertex3(2.0f, -1.0f, -0.5f);
-            GL.Vertex3(1.5f, -1.0f, -0.5f);
-           
-            GL.Vertex3(1.5f, 1.5f, 0.5f);
-            GL.Vertex3(2.0f, 1.5f, 0.5f);
-            GL.Vertex3(2.0f, 1.5f, -0.5f);
-            GL.Vertex3(1.5f, 1.5f, -0.5f);
-            
-            GL.Vertex3(1.5f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, -0.5f);
-            GL.Vertex3(1.5f, -1.0f, -0.5f);
-           
-            GL.Vertex3(2.0f, 1.5f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, 0.5f);
-            GL.Vertex3(2.0f, -1.0f, -0.5f);
-            GL.Vertex3(2.0f, 1.5f, -0.5f);
-            
-            GL.Vertex3(1.5f, 1.5f, 0.5f);
-            GL.Vertex3(1.5f, -1.0f, 0.5f);
-            GL.Vertex3(1.5f, -1.0f, -0.5f);
-            GL.Vertex3(1.5f, 1.5f, -0.5f);
-
-            GL.End();
-        }
-
-
+        
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
@@ -189,6 +78,5 @@ namespace LetraU
                 rotacionX += 2.0f;
             }
         }
-
     }
 }
