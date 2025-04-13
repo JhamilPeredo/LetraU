@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace LetraU
 {
+    
     public class Posicion
     {
+        
         public float X { get; set; }
+        
         public float Y { get; set; }
+        
         public float Z { get; set; }
 
         public Posicion(float x, float y, float z)
@@ -18,6 +23,9 @@ namespace LetraU
             Y = y;
             Z = z;
         }
+
+        public Posicion() { }
+    
 
     }
 }

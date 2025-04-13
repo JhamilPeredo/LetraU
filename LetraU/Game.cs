@@ -8,10 +8,59 @@ namespace LetraU
 {
     class Game : GameWindow
     {
+        private Escenario escenario;
         private float rotacionX = 0.0f;
         private float rotacionY = 0.0f;
 
-        public Game() : base(500, 700, GraphicsMode.Default, "U en 3D") { }
+        public Game() : base(500, 700, GraphicsMode.Default, "U en 3D")
+        {
+
+            escenario = new Escenario();
+            CargarEscenario("datosT.json");
+
+        }
+
+        private void CargarEscenario(string filePath)
+        {
+            var caras = Serializar.CargarJson(filePath);
+
+            var objetoT = new Objeto();
+            var parteVertical1 = new Parte();
+            var parteVertical2 = new Parte();
+            var parteHorizontal = new Parte();
+
+
+            parteVertical1.Add("cara1", caras["caraInferiorFrontal"]);
+            parteVertical1.Add("cara2", caras["caraInferiorTrasera"]);
+            parteVertical1.Add("cara3", caras["caraSuperiorFrontal"]);
+            parteVertical1.Add("cara4", caras["caraSuperiorTrasera"]);
+            parteVertical1.Add("cara5", caras["caraLateralDerechaFrontal"]);
+            parteVertical1.Add("cara6", caras["caraLateralIzquierdaFrontal"]);
+
+            // Parte Vertical (la parte del palito del "T")
+
+            parteVertical2.Add("cara7", caras["caraInteriorIzquierda"]);
+            parteVertical2.Add("cara8", caras["caraInteriorDerecha"]);
+            parteVertical2.Add("cara9", caras["caraSuperiorInternaIzquierda"]);
+            parteVertical2.Add("cara10", caras["caraSuperiorInternaDerecha"]);
+            parteVertical2.Add("cara11", caras["caraSuperiorIzquierda"]);
+            parteVertical2.Add("cara12", caras["caraSuperiorDerecha"]);
+
+            // Conexiones entre ambas partes (costados)
+
+            parteHorizontal.Add("cara13", caras["caraTraseraIzquierda"]);
+            parteHorizontal.Add("cara14", caras["caraTraseraDerecha"]);
+            parteHorizontal.Add("cara15", caras["caraInferiorInternaIzquierda"]);
+            parteHorizontal.Add("cara16", caras["caraInferiorInternaDerecha"]);
+            parteHorizontal.Add("cara17", caras["caraLateralSuperiorIzquierda"]);
+            parteHorizontal.Add("cara18", caras["caraLateralSuperiorDerecha"]);
+
+            objetoT.Add("objeto1", parteVertical1);
+            objetoT.Add("objeto2", parteVertical2);
+            objetoT.Add("objeto3", parteHorizontal);
+
+            escenario.Add("escenario1", objetoT);
+        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -33,19 +82,7 @@ namespace LetraU
             GL.Rotate(rotacionY, 0.0f, 1.0f, 0.0f);
 
 
-            Posicion[] posiciones = new Posicion[]
-           {
-                new Posicion(0f, 0f, 0f),      // Centro
-                new Posicion(6f, 0f, 0f),      // A la derecha
-                new Posicion(-6f, 0f, 0f),     // A la izquierda
-                new Posicion(0f, 6f, 0f),      // Arriba
-                new Posicion(0f, -6f, 0f)      // Abajo
-           };
-
-            foreach (var posicion in posiciones)
-            {
-                Vertice.DibujarU(posicion);
-            }
+            escenario.Draw();
 
             SwapBuffers();
         }

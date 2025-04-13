@@ -9,3 +9,5 @@ C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.csproj.CoreCompileIn
 C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.csproj.CopyComplete
 C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.exe
 C:\Users\JHAMIL\source\repos\LetraU\LetraU\obj\Debug\LetraU.pdb
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\Newtonsoft.Json.xml
