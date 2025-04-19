@@ -27,6 +27,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraInferiorTrasera": {
@@ -57,6 +62,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorFrontal": {
@@ -87,6 +97,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorTrasera": {
@@ -117,6 +132,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraLateralDerechaFrontal": {
@@ -147,6 +167,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraLateralIzquierdaFrontal": {
@@ -177,6 +202,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraInteriorIzquierda": {
@@ -207,6 +237,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraInteriorDerecha": {
@@ -237,6 +272,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorInternaIzquierda": {
@@ -267,6 +307,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorInternaDerecha": {
@@ -297,6 +342,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorIzquierda": {
@@ -327,6 +377,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraSuperiorDerecha": {
@@ -357,6 +412,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraTraseraIzquierda": {
@@ -387,6 +447,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraTraseraDerecha": {
@@ -417,6 +482,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraInferiorInternaIzquierda": {
@@ -447,6 +517,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraInferiorInternaDerecha": {
@@ -477,6 +552,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraLateralSuperiorIzquierda": {
@@ -507,6 +587,11 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   },
   "caraLateralSuperiorDerecha": {
@@ -537,6 +622,12 @@
       "G": 0.0,
       "B": 1.0,
       "A": 1.0
+    },
+    "centro": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
     }
   }
 }
+

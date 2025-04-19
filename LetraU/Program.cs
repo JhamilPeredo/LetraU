@@ -16,7 +16,7 @@ namespace LetraU
             //var cara = Vertice.CrearCaras();
 
             // Guardar el diccionario en un archivo JSON
-          //  Serializar.GuardarJson(cara, filePath);
+            //Serializar.GuardarJson(cara, filePath);
 
             // Cargar el diccionario desde el archivo JSON
             var cargarcaras = Serializar.CargarJson(filePath);

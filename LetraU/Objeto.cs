@@ -13,6 +13,14 @@ namespace LetraU
         [JsonProperty]
         private Dictionary<string, Parte> partes = new Dictionary<string, Parte>();
 
+        [JsonProperty]
+        public Vertice centro { get; set; }
+
+        public Objeto()
+        {
+            this.centro = new Vertice(0.0f, 0.0f, 0.0f);
+
+        }
         public void Add(string id, Parte parte)
         {
             partes[id] = parte;
@@ -28,11 +36,40 @@ namespace LetraU
             partes.Remove(id);
         }
 
-        public void Draw()
+        public void Draw(Vertice c)
+        {
+            Vertice nuevocentro = new Vertice(c.X, c.Y, c.Z);
+            nuevocentro += centro;
+
+            foreach (var parte in partes.Values)
+            {
+                parte.Draw(nuevocentro);
+            }
+        }
+
+
+        public void TransladarObjeto(float x, float y, float z)
+        {
+            centro = new Vertice(centro.X + x, centro.Y + y, centro.Z + z);
+            foreach (var parte in partes.Values)
+            {
+                parte.TransladarParte(x, y, z);
+            }
+        }
+
+        public void ScalarObjeto(float n)
         {
             foreach (var parte in partes.Values)
             {
-                parte.Draw();
+                parte.ScalarParte(n);
+            }
+        }
+
+        public void RotarObjeto(string axis, float grados)
+        {
+            foreach (var parte in partes.Values)
+            {
+                parte.RotarParte(axis, grados);
             }
         }
     }

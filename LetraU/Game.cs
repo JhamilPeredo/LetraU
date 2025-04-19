@@ -37,16 +37,12 @@ namespace LetraU
             parteVertical1.Add("cara5", caras["caraLateralDerechaFrontal"]);
             parteVertical1.Add("cara6", caras["caraLateralIzquierdaFrontal"]);
 
-            // Parte Vertical (la parte del palito del "T")
-
             parteVertical2.Add("cara7", caras["caraInteriorIzquierda"]);
             parteVertical2.Add("cara8", caras["caraInteriorDerecha"]);
             parteVertical2.Add("cara9", caras["caraSuperiorInternaIzquierda"]);
             parteVertical2.Add("cara10", caras["caraSuperiorInternaDerecha"]);
             parteVertical2.Add("cara11", caras["caraSuperiorIzquierda"]);
             parteVertical2.Add("cara12", caras["caraSuperiorDerecha"]);
-
-            // Conexiones entre ambas partes (costados)
 
             parteHorizontal.Add("cara13", caras["caraTraseraIzquierda"]);
             parteHorizontal.Add("cara14", caras["caraTraseraDerecha"]);
@@ -81,8 +77,10 @@ namespace LetraU
             GL.Rotate(rotacionX, 1.0f, 0.0f, 0.0f);
             GL.Rotate(rotacionY, 0.0f, 1.0f, 0.0f);
 
+            
 
-            escenario.Draw();
+            escenario.Draw(new Vertice(0.0f, 0.0f, 0.0f));
+            escenario.Draw(new Vertice(5.0f, 0.0f, 0.0f));
 
             SwapBuffers();
         }
@@ -92,7 +90,7 @@ namespace LetraU
         {
             base.OnUpdateFrame(e);
             var teclado = Keyboard.GetState();
-
+          
             if (teclado.IsKeyDown(Key.Escape))
             {
                 Exit();
@@ -114,6 +112,61 @@ namespace LetraU
             {
                 rotacionX += 2.0f;
             }
+
+            // Rotar el escenario
+            if (teclado.IsKeyDown(Key.Q))
+            {
+                escenario.RotarEscenario("y", 1.0f);  // Rotar alrededor del eje Y
+            }
+
+            if (teclado.IsKeyDown(Key.W))
+            {
+                escenario.RotarEscenario("x", 1.0f);  // Rotar alrededor del eje X
+            }
+
+            if (teclado.IsKeyDown(Key.E))
+            {
+                escenario.RotarEscenario("z", 1.0f);  // Rotar alrededor del eje Z
+            }
+            //////////////////////////////////////////////////////
+            // Escalar el escenario
+            if (teclado.IsKeyDown(Key.R))
+            {
+                escenario.ScalarEscenario(1.1f);  // Aumenta el tamaño
+            }
+
+            if (teclado.IsKeyDown(Key.T))
+            {
+                escenario.ScalarEscenario(0.9f);  // Reduce el tamaño
+            }
+
+            /////////////////////////////////////////////////////////////
+            // Trasladar el escenario
+            if (teclado.IsKeyDown(Key.Y))
+            {
+                escenario.TransladarEscenario(0.1f, 0.0f, 0.0f);  // Mover en el eje X
+            }
+
+            if (teclado.IsKeyDown(Key.U))
+            {
+                escenario.TransladarEscenario(-0.1f, 0.0f, 0.0f);  // Mover en el eje X negativo
+            }
+
+            if (teclado.IsKeyDown(Key.I))
+            {
+                escenario.TransladarEscenario(0.0f, 0.1f, 0.0f);  // Mover en el eje Y positivo 
+            }
+
+            if (teclado.IsKeyDown(Key.O))
+            {
+                escenario.TransladarEscenario(0.0f, -0.1f, 0.0f);  // Mover en el eje Y negativo 
+            }
+
+            if (teclado.IsKeyDown(Key.P))
+            {
+                escenario.TransladarEscenario(0.0f, 0.0f, -0.1f);  // Mover en el eje Y negativo 
+            }
+
         }
     }
 }
