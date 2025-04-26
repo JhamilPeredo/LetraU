@@ -42,7 +42,7 @@ namespace LetraU
         }
 
         
-             /*   public static Dictionary<string, Cara> CrearCaras()
+               /*public static Dictionary<string, Cara> CrearCaras()
                 {
                     var caras = new Dictionary<string, Cara>();
                     var caraInferiorFrontal = new Cara();
@@ -207,13 +207,8 @@ namespace LetraU
                     caras["caraLateralSuperiorDerecha"] = caraLateralSuperiorDerecha;
 
                     return caras;
-
-
                 }
-
-              */
-        
-
+               */
     }
 
 }

@@ -10,17 +10,6 @@ namespace LetraU
     {
         static void Main(string[] args)
         {
-
-            string filePath = @"C:\Users\JHAMIL\source\repos\LetraU\LetraU\bin\Debug\datosT.json";
-            // Crear un diccionario de polígonos para prueba
-            //var cara = Vertice.CrearCaras();
-
-            // Guardar el diccionario en un archivo JSON
-            //Serializar.GuardarJson(cara, filePath);
-
-            // Cargar el diccionario desde el archivo JSON
-            var cargarcaras = Serializar.CargarJson(filePath);
-
             using (Game game = new Game())
             {
                 game.Run();

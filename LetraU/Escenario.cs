@@ -30,6 +30,10 @@ namespace LetraU
         {
             return objetos.ContainsKey(id) ? objetos[id] : null;
         }
+        public Dictionary<string, Objeto> GetAll()
+        {
+            return objetos;
+        }
 
         public void Delete(string id)
         {

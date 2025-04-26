@@ -10,15 +10,15 @@ namespace LetraU
 {
     public class Serializar
     {
-        public static void GuardarJson(Dictionary<string, Cara> caras, string filePath)
+        public static void GuardarJson(Dictionary<string, Escenario> escenario, string filePath)
         {
-            string json = JsonConvert.SerializeObject(caras, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(escenario, Formatting.Indented);
             File.WriteAllText(filePath, json);
         }
-        public static Dictionary<string, Cara> CargarJson(string filePath)
+        public static Dictionary<string, Escenario> CargarJson(string filePath)
         {
             string json = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<Dictionary<string, Cara>>(json);
+            return JsonConvert.DeserializeObject<Dictionary<string, Escenario>>(json);
         }
     }
 }
