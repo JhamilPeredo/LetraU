@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using OpenTK;
+using OpenTK.Graphics.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,8 @@ namespace LetraU
     {
         [JsonProperty]
         private Dictionary<string, Parte> partes = new Dictionary<string, Parte>();
-
+        public Vector3 Posicion = Vector3.Zero;
+        public Vector3 Rotacion = Vector3.Zero;
         [JsonProperty]
         public Vertice centro { get; set; }
 
@@ -35,12 +38,20 @@ namespace LetraU
         {
             partes.Remove(id);
         }
-
+        public void RotarObjeto0(string eje, float angulo)
+        {
+            switch (eje.ToLower())
+            {
+                case "x": Rotacion.X += angulo; break;
+                case "y": Rotacion.Y += angulo; break;
+                case "z": Rotacion.Z += angulo; break;
+            }
+        }
         public void Draw(Vertice c)
         {
             Vertice nuevocentro = new Vertice(c.X, c.Y, c.Z);
             nuevocentro += centro;
-
+            GL.Rotate(Rotacion.X, 1, 0, 0);
             foreach (var parte in partes.Values)
             {
                 parte.Draw(nuevocentro);
@@ -72,5 +83,15 @@ namespace LetraU
                 parte.RotarParte(axis, grados);
             }
         }
+
+        public Parte BuscarParte(string nombreParte)
+        {
+            if (partes.ContainsKey(nombreParte))
+            {
+                return partes[nombreParte];
+            }
+            return null;
+        }
+
     }
 }

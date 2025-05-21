@@ -76,5 +76,16 @@ namespace LetraU
                 objeto.RotarObjeto(axis, grados);
             }
         }
+
+        public Parte BuscarParte(string nombreParte)
+        {
+            foreach (var kvp in objetos)
+            {
+                var parte = kvp.Value.BuscarParte(nombreParte);
+                if (parte != null)
+                    return parte;
+            }
+            return null;
+        }
     }
 }
